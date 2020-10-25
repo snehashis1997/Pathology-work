@@ -28,3 +28,8 @@ print("Number of Contours found = " + str(len(contours)))
 #img1 = cv2.cvtColor(img1, cv2.COLOR_GRAY2RGB) 
 image = image.astype(np.uint8)
 con = cv2.drawContours(image, contours, -1, (0, 0, 255), 7)
+
+plt.figure(figsize=(7,7))
+plt.imshow(con)
+plt.axis("off")
+plt.title("Detected Macrophage: no of cells present " + str(len(contours)));
